@@ -1,0 +1,53 @@
+.navigation {
+  height: 5.5rem;
+  box-shadow: 0 0.1rem 0.6rem 0 rgba(0, 0, 0, 0.12);
+  color: black;
+  &-container {
+    height: inherit;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__links {
+    height: 100%;
+    width: 50%;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    font-weight: 500;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-item {
+      height: inherit;
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-grow: 1;
+      color: black;
+
+      a:visited {
+        color: black;
+      }
+      &:hover,
+      &.isActive {
+        color: blue;
+        box-sizing: border-box;
+        &::before {
+          height: 0.5rem;
+          width: 100%;
+          background-color: blue;
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
